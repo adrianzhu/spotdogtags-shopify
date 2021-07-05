@@ -112,6 +112,7 @@ function initAccordionListeners() {
 // theme.js > cart.prototype.addItemFromForm 
 
 $(document).ready(function() {
+  console.log("Staging");
   initTextPreviewListeners();
   initAccordionListeners();
 });
