@@ -1,0 +1,142 @@
+/* To add a font: 
+1. On the left go to Assets folder -> "Add a new asset"
+2. Add the .ttf file
+3. Add the @font-face section here with the exact filename
+*/
+
+@font-face {
+  font-family: "Sriracha";
+  src: url("Sriracha-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "SourceSansPro";
+  src: url("SourceSansPro-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "SourceSansPro-SemiBold";
+  src: url("SourceSansPro-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Nunito-Bold";
+  src: url("Nunito-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Nunito-ExtraBold";
+  src: url("Nunito-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Dosis-Bold";
+  src: url("Dosis-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "SourceSerifPro";
+  src: url("SourceSerifPro-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Cutive";
+  src: url("Cutive-Regular.ttf") format("truetype");
+}
+
+.product-form__item {
+  margin-bottom: 18px;
+}
+
+
+.product-template-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.product-preview-container {
+  display: grid;
+  /*   flex: 0 1 1600px;
+   grid-template-columns: repeat(auto-fill, 800px); */
+  flex: 0 1 560px;
+  grid-template-columns: repeat(auto-fill, 280px);
+  justify-content: center;
+  margin: 25px;
+}
+.product-info-container {
+  flex: 1 1 350px;
+  margin: 25px;
+}
+.product-info-container hr {
+  border-color: #aaa;
+}
+.product-info-header {
+  color: #59916f;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 20px !important;
+}
+.custom-tag-price-section {
+  margin-top:17px;
+  margin-bottom:20px;
+}
+#AddToCartForm-product-template-custom_tag {
+  margin-bottom: 20px;
+}
+.product-details ul {
+  margin: 0 0 10px 20px;
+}
+.product-details li {
+  margin-bottom: 10px;
+}
+input.capsTextField {
+  text-transform: uppercase;
+}
+.image-preview-container {
+  position: relative;
+}
+.image-preview-container > img {
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.product-preview-text-container {
+  text-align: center;
+  /*   background-color: #ddd; */
+  position: absolute;
+  z-index: 4;
+  border: 1px solid #000;
+}
+.product-preview-text {
+  text-align: center;
+  overflow-wrap: break-word;
+  border: 3px solid #eee;
+}
+.sriracha-font {
+  font-family: "Sriracha";
+}
+.sourcesanspro-font {
+  font-family: "SourceSansPro";
+}
+.sourcesanspro-semibold-font {
+  font-family: "SourceSansPro-SemiBold";
+}
+
+.accordion-header {
+  padding: 10px 18px;
+  margin-left: -18px;
+  margin-right: -18px;
+  border-radius:14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.accordion-header:hover {
+  background-color: #EEE;
+}
+
+.accordion-content {
+  overflow: hidden;
+  transition: max-height 0.4s ;
+  max-height: 600px;
+}
+
+.accordion-content.closed {
+  max-height: 0px;
+}
+.accordion-icon {
+  float: right;
+}

@@ -1,0 +1,18 @@
+{% comment %}
+  DO NOT MODIFY THIS FILE DIRECTLY. THIS FILE WILL BE OVERWRITTEN.
+  YOU CAN MODIFY THE LIQUID CODE FOR THIS CUSTOM FIELD HERE:
+  https://customfields.bonify.io/dashboard/spot-dog-tags.myshopify.com/products/configure/236815/edit
+{% endcomment %}
+{% if product.metafields.custom_fields["product_details"] != blank %}
+  <div class="custom-field custom-field__product-details custom-field__type--text-list">
+    <h3 class="custom-field--title">product_details</h3>
+    <div class="custom-field--value">  
+      {% assign values = product.metafields.custom_fields["product_details"] | split: "|" %}
+      <ul>
+      {% for value in values %}
+        <li>{{ value }}</li>
+      {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endif %}
