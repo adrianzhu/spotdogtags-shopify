@@ -101,7 +101,7 @@
               <input type="text"
                      id="{{ text_field["field-id"] }}" 
                      name="properties[{{ text_field["field-name"] }}]" 
-                     maxlength="15"
+                     maxlength={% if text_field["field-id"] == "PetName" %}"12"{% else %}"15"{% endif %}
                      class="product-form__input tag-customizer-input">
             </div>
           {% endfor %}
