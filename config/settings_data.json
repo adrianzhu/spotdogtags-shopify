@@ -92,18 +92,20 @@
               "align": "left"
             }
           },
-          "147cc54b-a094-40c8-8c2f-cef81a699332": {
-            "type": "text",
+          "7b91b658-f0ef-4c81-9018-3c0c9ca7eba6": {
+            "type": "newsletter",
             "settings": {
-              "title": "Text column",
-              "text": "<p>Share store details, promotions, or brand content with your customers<\/p>"
+              "color_newsletter_input": "#1a1a1a",
+              "color_newsletter_input_text": "#fff",
+              "title": "Newsletter",
+              "subheading": "<p>Hear about our promotions, new products and sales first. Join our newsletter!<\/p>"
             }
           }
         },
         "block_order": [
           "linklist",
           "social",
-          "147cc54b-a094-40c8-8c2f-cef81a699332"
+          "7b91b658-f0ef-4c81-9018-3c0c9ca7eba6"
         ],
         "settings": {
           "show_payment_icons": true
@@ -123,7 +125,8 @@
           "logo_max_width": "150",
           "main_linklist": "main-menu",
           "promo_bar_enable": false,
-          "promo_bar_text": ""
+          "promo_bar_text": "",
+          "promo_bar_link": ""
         }
       },
       "1595454218723": {
@@ -246,15 +249,6 @@
           "sort": "alphabetical"
         }
       },
-      "product-template-style1": {
-        "type": "product-template-style1",
-        "settings": {
-          "enable_ajax": true,
-          "stock_enable": false,
-          "enable_payment_button": true,
-          "social_sharing_products": true
-        }
-      },
       "product-template-custom_tag": {
         "type": "product-template-custom_tag",
         "settings": {
@@ -307,51 +301,60 @@
           "blocks": {
             "placeholder-0": {
               "type": "slide",
-              "settings": {}
+              "settings": {
+              }
             },
             "placeholder-1": {
               "type": "slide",
-              "settings": {}
+              "settings": {
+              }
             }
           },
           "block_order": [
             "placeholder-0",
             "placeholder-1"
           ],
-          "settings": {}
+          "settings": {
+          }
         },
         "footer": {
           "type": "footer",
           "blocks": {
             "linklist": {
               "type": "menu",
-              "settings": {}
+              "settings": {
+              }
             },
             "social": {
               "type": "social",
-              "settings": {}
+              "settings": {
+              }
             }
           },
           "block_order": [
             "linklist",
             "social"
           ],
-          "settings": {}
+          "settings": {
+          }
         },
         "featured-collections": {
           "type": "featured-collections",
           "blocks": {
             "featured-collections-0": {
               "type": "collection",
-              "settings": {}
+              "settings": {
+              }
             },
             "featured-collections-1": {
               "type": "collection",
-              "settings": {}
+              "settings": {
+              }
             },
             "featured-collections-2": {
               "type": "collection",
-              "settings": {}
+              "settings": {
+              }
             }
           },
           "block_order": [
@@ -359,7 +362,8 @@
             "featured-collections-1",
             "featured-collections-2"
           ],
-          "settings": {}
+          "settings": {
+          }
         },
         "featured-products": {
           "type": "featured-products",
@@ -372,18 +376,21 @@
           "blocks": {
             "image-content-0": {
               "type": "image_block",
-              "settings": {}
+              "settings": {
+              }
             },
             "image-content-1": {
               "type": "text_block",
-              "settings": {}
+              "settings": {
+              }
             }
           },
           "block_order": [
             "image-content-0",
             "image-content-1"
           ],
-          "settings": {}
+          "settings": {
+          }
         }
       },
       "content_for_index": [
