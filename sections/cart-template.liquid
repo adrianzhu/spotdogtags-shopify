@@ -3,6 +3,7 @@
     {% if cart.item_count > 0 %}
 
       <h1 class="small--text-center">{{ 'cart.general.title' | t }}</h1>
+      <p>Please double check your personalized text for each tag in your order and <strong>make sure there are no spelling mistakes or errors</strong>. As each tag is custom and unique to you, all sales are final and no returns or refunds are available.</p>
       <form action="{{ routes.cart_url }}" method="post" novalidate class="cart">
         <table class="responsive-table cart-table">
           <thead class="cart__row visually-hidden">
