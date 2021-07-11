@@ -96,7 +96,7 @@
             "type": "newsletter",
             "settings": {
               "color_newsletter_input": "#1a1a1a",
-              "color_newsletter_input_text": "#fff",
+              "color_newsletter_input_text": "#ffffff",
               "title": "Newsletter",
               "subheading": "<p>Hear about our promotions, new products and sales first. Join our newsletter!<\/p>"
             }
@@ -124,8 +124,8 @@
           "logo": "shopify:\/\/shop_images\/Logo_Stacked_RGB.png",
           "logo_max_width": "150",
           "main_linklist": "main-menu",
-          "promo_bar_enable": false,
-          "promo_bar_text": "",
+          "promo_bar_enable": true,
+          "promo_bar_text": "FREE SHIPPING - US orders over $40 \/ Canada & International orders over $75",
           "promo_bar_link": ""
         }
       },
