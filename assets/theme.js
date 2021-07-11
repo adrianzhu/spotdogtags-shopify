@@ -1905,6 +1905,11 @@ window.AjaxCart = (function() {
       if ($(this).val() == false) {
         $(this).val('\u200F'); 
       }
+
+      // CSS text transform does not actually submit uppercase form values
+      if ($(this).css('text-transform') == 'uppercase') {
+        $(this).val($(this).val().toUpperCase());
+      }
     });
     
     var params = {
