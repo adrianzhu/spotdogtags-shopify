@@ -1777,7 +1777,7 @@ window.QtySelector = (function() {
       }
 
       // Create item's data object and add to 'items' array
-//       debugger;
+      debugger;
       item = {
         key: cartItem.key,
         line: index + 1, // Shopify uses a 1+ index in the API
