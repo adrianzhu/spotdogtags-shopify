@@ -57,11 +57,11 @@
                 <td class="cart__cell--total">
                   {%- if item.original_line_price != item.final_line_price -%}
                     <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
-                    <del class="cart__item-total">{{ item.original_line_price | money }}</del>
+                    <del class="cart__item-total">{{ item.original_line_price | money_with_currency }}</del>
                     <span class="visually-hidden">{{ 'products.product.sale_price' | t }}</span>
-                    <span class="cart__item-total">{{ item.final_line_price | money }}</span>
+                    <span class="cart__item-total">{{ item.final_line_price | money_with_currency }}</span>
                   {%- else -%}
-                    <span class="cart__item-total">{{ item.original_line_price | money }}</span>
+                    <span class="cart__item-total">{{ item.original_line_price | money_with_currency }}</span>
                   {%- endif -%}
                   {%- if item.unit_price_measurement -%}
                     {% include 'product-unit-price', product_variant: item %}
