@@ -102,7 +102,7 @@
                 </div>
               {%- endif -%}
 
-              <p class="h3 cart__subtotal" id="CartSubtotal">{{ cart.total_price | money }}</p>
+              <p class="h3 cart__subtotal" id="CartSubtotal">{{ cart.total_price | money_with_currency }}</p>
             </div>
 
             {%- capture taxes_shipping_checkout -%}
