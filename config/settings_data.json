@@ -59,10 +59,10 @@
           "placeholder-1": {
             "type": "slide",
             "settings": {
-              "image": "shopify:\/\/shop_images\/cute-brown-puppy-sitting-in-orange-living-room.jpg",
+              "image": "shopify:\/\/shop_images\/DSC08809.jpg",
               "image_position": "center center",
               "title": "Personalized pet tags",
-              "button_label": "Browse collections",
+              "button_label": "See all tags",
               "button_link": "shopify:\/\/collections"
             }
           }
