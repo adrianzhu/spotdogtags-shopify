@@ -60,7 +60,7 @@
             "type": "slide",
             "settings": {
               "image": "shopify:\/\/shop_images\/DSC08809.jpg",
-              "image_position": "center top",
+              "image_position": "right center",
               "title": "Personalized pet tags",
               "button_label": "See all tags",
               "button_link": "shopify:\/\/collections"
