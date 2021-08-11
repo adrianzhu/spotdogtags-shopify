@@ -62,13 +62,24 @@
               "image": "shopify:\/\/shop_images\/DSC08809-3.jpg",
               "image_position": "center top",
               "title": "Personalized pet tags",
-              "button_label": "See all tags",
+              "button_label": "Browse all tags",
+              "button_link": "shopify:\/\/collections\/all"
+            }
+          },
+          "2d442f44-cb05-45c5-88ff-5d2d464180a1": {
+            "type": "slide",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/DSC08897-2.jpg",
+              "image_position": "right center",
+              "title": "A tag for every pup",
+              "button_label": "Browse collections",
               "button_link": "shopify:\/\/collections"
             }
           }
         },
         "block_order": [
-          "placeholder-1"
+          "placeholder-1",
+          "2d442f44-cb05-45c5-88ff-5d2d464180a1"
         ],
         "settings": {
           "hero_home_height": "small",
