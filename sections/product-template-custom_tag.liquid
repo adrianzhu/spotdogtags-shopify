@@ -65,7 +65,7 @@
         {% capture "form_id" %}AddToCartForm-{{ section.id }}{%- endcapture %}
 
         {% form 'product', product, class:form_class, id:form_id %}
-          <div class="product-info-header product-form__item">CUSTOMIZE</div>
+          <div class="product-info-header product-form__item">CUSTOMIZE YOUR TAG</div>
         
           {% unless product.has_only_default_variant %}
             {% for option in product.options_with_values %}
