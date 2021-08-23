@@ -140,15 +140,6 @@
           "promo_bar_link": ""
         }
       },
-      "1595454218723": {
-        "type": "rich-text",
-        "settings": {
-          "home_page_full_width": false,
-          "section_title": "There's a tag for every pup out there!",
-          "text": "",
-          "text_size": "medium"
-        }
-      },
       "collection-filters": {
         "type": "collection-filters",
         "settings": {
@@ -268,13 +259,49 @@
           "enable_payment_button": false,
           "social_sharing_products": true
         }
+      },
+      "1629751631dc68794a": {
+        "type": "image-content",
+        "blocks": {
+          "1629751631dc68794a-1": {
+            "type": "text_block",
+            "settings": {
+              "title": "Designed in Canada 🍁",
+              "text": "<p>All tag designs are created by our little team of two, with help and input from you: our fans!<\/p>",
+              "align": "left"
+            }
+          },
+          "196fa7f6-65b5-4071-809a-cef5b8adcc85": {
+            "type": "text_block",
+            "settings": {
+              "title": "Made in the USA 🦅",
+              "text": "<p>Each tag is hand-pressed in the USA by our manufacturing partner and shipped directly to you.<\/p>",
+              "align": "left"
+            }
+          },
+          "bbf48b57-d3a5-4839-bc43-ea0be29d569a": {
+            "type": "text_block",
+            "settings": {
+              "title": "Shipped worldwide 🌎🌍🌏",
+              "text": "<p>We know good boys and girls are all over the world, so your pup can get a Spot Dog Tags tag from anywhere!<\/p>",
+              "align": "left"
+            }
+          }
+        },
+        "block_order": [
+          "1629751631dc68794a-1",
+          "196fa7f6-65b5-4071-809a-cef5b8adcc85",
+          "bbf48b57-d3a5-4839-bc43-ea0be29d569a"
+        ],
+        "settings": {
+        }
       }
     },
     "content_for_index": [
       "slideshow",
       "featured-products",
+      "1629751631dc68794a",
       "16051571228dd18ee8",
-      "1595454218723",
       "16051571295ae8a90c"
     ]
   },
