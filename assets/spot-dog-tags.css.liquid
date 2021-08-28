@@ -62,11 +62,17 @@
   .product-preview-container {
     grid-template-columns: repeat(auto-fill, 280px);
   }
+  .preview-tag-header {
+    display:none;
+  }
 }
 @media screen and (max-width: 479px) {
   /* start of phone styles */
   .product-preview-container {
     grid-template-columns: repeat(auto-fill, 170px); 
+  }
+  .preview-tag-header {
+    flex-basis: 100%;
   }
 }
 .product-info-container {
