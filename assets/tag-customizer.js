@@ -120,6 +120,6 @@ $(document).ready(function() {
   initTextPreviewListeners();
   initAccordionListeners();
   $(window).on("resize", function(e) {
-    resizeAllContainers();
+    initTextPreviewListeners();
   });
 });
