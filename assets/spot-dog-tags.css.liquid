@@ -54,12 +54,20 @@
 }
 .product-preview-container {
   display: grid;
-  /*   flex: 0 1 1600px;
-   grid-template-columns: repeat(auto-fill, 800px); */
   flex: 0 1 560px;
-  grid-template-columns: repeat(auto-fill, 280px);
   justify-content: center;
   margin: 25px;
+}
+@media screen and (min-width: 480px) {
+  .product-preview-container {
+    grid-template-columns: repeat(auto-fill, 280px);
+  }
+}
+@media screen and (max-width: 479px) {
+  /* start of phone styles */
+  .product-preview-container {
+    grid-template-columns: repeat(auto-fill, 170px); 
+  }
 }
 .product-info-container {
   flex: 1 1 350px;
