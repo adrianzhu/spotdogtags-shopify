@@ -8,12 +8,12 @@ function updateTextOverlay(textDiv, text) {
   var textField = $(textDiv)[0];
   var newFontSize;
   
-  // console.log(textDiv);
-  // console.log("height = " + $(textDiv).height());
+  console.log(textDiv);
+  console.log("height = " + $(textDiv).height());
 
-  // console.log("innerHeight = " + $(textDiv).innerHeight());
-  // console.log("offsetHeight = " + $(textDiv)[0].offsetHeight);
-  // console.log("container offsetHeight = " + containerDiv[0].offsetHeight);
+  console.log("innerHeight = " + $(textDiv).innerHeight());
+  console.log("offsetHeight = " + $(textDiv)[0].offsetHeight);
+  console.log("container offsetHeight = " + containerDiv[0].offsetHeight);
 
   while ($(textDiv).height() > containerDiv[0].offsetHeight) {
     newFontSize = (parseInt($(textDiv).css('font-size').slice(0, -2)) - 1) + 'px';
@@ -119,7 +119,7 @@ $(document).ready(function() {
   // console.log("Staging");
   initTextPreviewListeners();
   initAccordionListeners();
-  $(window).on("resize", function(e) {
-    initTextPreviewListeners();
+  $(window).resize(function(e) {
+    resizeAllContainers();
   });
 });
