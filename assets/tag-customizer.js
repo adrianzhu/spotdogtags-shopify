@@ -21,7 +21,7 @@ function updateTextOverlay(textDiv, text) {
   }
 }
 
-function initTextPreviewListeners() {
+function resizeAllContainers() {
   $('.product-preview-text-container').each(function(index, container) {
     var preview_img = $($(container).siblings('.preview-img')[0]);
 	
@@ -35,6 +35,10 @@ function initTextPreviewListeners() {
       resizeContainers(preview_img, container);
     }
   });
+}
+
+function initTextPreviewListeners() {
+  resizeAllContainers();
   
   // Resize text on every user input
   $('input.tag-customizer-input').each(function(index, input) {
@@ -115,4 +119,7 @@ $(document).ready(function() {
   // console.log("Staging");
   initTextPreviewListeners();
   initAccordionListeners();
+  $(window).on("resize", function(e) {
+    resizeAllContainers();
+  });
 });
