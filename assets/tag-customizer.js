@@ -77,6 +77,7 @@ function resizeContainers(preview_img, container) {
   }
   
   if ($("input#" + input_id).val()) {
+    console.log("input_id = " + input_id);
     updateTextOverlay("field-" + input_id, $("input#" + input_id).val());
   }
 }
@@ -121,6 +122,6 @@ $(document).ready(function() {
   initTextPreviewListeners();
   initAccordionListeners();
   $(window).resize(function(e) {
-    initTextPreviewListeners();
+    resizeAllContainers();
   });
 });
