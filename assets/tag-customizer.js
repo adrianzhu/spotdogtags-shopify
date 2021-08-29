@@ -24,7 +24,7 @@ function updateTextOverlay(textDiv, text) {
 function resizeAllContainers() {
   $('.product-preview-text-container').each(function(index, container) {
     var preview_img = $($(container).siblings('.preview-img')[0]);
-    console.log(preview_img);
+    // console.log(preview_img);
 	// Check if the img is loaded completely, when it's not the height will be 0.
 	// If it's 0 then wait until fully loaded
     if (preview_img.height() == 0) {
@@ -75,8 +75,8 @@ function resizeContainers(preview_img, container) {
     $("input#" + input_id).css('text-transform', text_transform);
   }
   
-  if ($(input_id).val()) {
-    updateTextOverlay(container, $(input_id).val());
+  if ($(input_id).text()) {
+    updateTextOverlay(container, $(input_id).text());
   }
 }
 
