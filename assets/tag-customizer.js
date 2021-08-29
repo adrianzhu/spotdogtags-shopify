@@ -8,7 +8,7 @@ function updateTextOverlay(textDiv, text) {
   var textField = $(textDiv)[0];
   var newFontSize;
   
-  // console.log(textDiv);
+  console.log("updateTextOverlay: " + textDiv + " " + text);
   // console.log("height = " + $(textDiv).height());
 
   // console.log("innerHeight = " + $(textDiv).innerHeight());
@@ -120,8 +120,6 @@ $(document).ready(function() {
   initTextPreviewListeners();
   initAccordionListeners();
   $(window).resize(function(e) {
-    console.log("resized");
-    console.log($("#field-PetName").height());
-    resizeAllContainers();
+    initTextPreviewListeners();
   });
 });
