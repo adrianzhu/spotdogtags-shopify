@@ -75,6 +75,7 @@ function resizeContainers(preview_img, container) {
     $("input#" + input_id).css('text-transform', text_transform);
   }
   
+  debugger;
   if ($(container).val()) {
     updateTextOverlay(container, $(container).val());
   }
