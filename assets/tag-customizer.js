@@ -8,7 +8,7 @@ function updateTextOverlay(textDiv, text) {
   var textField = $(textDiv)[0];
   var newFontSize;
   
-  console.log("updateTextOverlay: " + textDiv + " " + text);
+  // console.log("updateTextOverlay: " + textDiv + " " + text);
   // console.log("height = " + $(textDiv).height());
 
   // console.log("innerHeight = " + $(textDiv).innerHeight());
@@ -77,7 +77,7 @@ function resizeContainers(preview_img, container) {
   }
   
   if ($("input#" + input_id).val()) {
-    console.log("input_id = " + input_id);
+    // console.log("input_id = " + input_id);
     updateTextOverlay("#field-" + input_id, $("input#" + input_id).val());
   }
 }
