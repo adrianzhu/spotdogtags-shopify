@@ -77,7 +77,7 @@ function resizeContainers(preview_img, container) {
   }
   
   if ($("input#" + input_id).val()) {
-    updateTextOverlay(container, $("input#" + input_id).val());
+    updateTextOverlay("field-" + input_id, $("input#" + input_id).val());
   }
 }
 
