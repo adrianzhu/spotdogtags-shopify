@@ -8,12 +8,12 @@ function updateTextOverlay(textDiv, text) {
   var textField = $(textDiv)[0];
   var newFontSize;
   
-  console.log(textDiv);
-  console.log("height = " + $(textDiv).height());
+  // console.log(textDiv);
+  // console.log("height = " + $(textDiv).height());
 
-  console.log("innerHeight = " + $(textDiv).innerHeight());
-  console.log("offsetHeight = " + $(textDiv)[0].offsetHeight);
-  console.log("container offsetHeight = " + containerDiv[0].offsetHeight);
+  // console.log("innerHeight = " + $(textDiv).innerHeight());
+  // console.log("offsetHeight = " + $(textDiv)[0].offsetHeight);
+  // console.log("container offsetHeight = " + containerDiv[0].offsetHeight);
 
   while ($(textDiv).height() > containerDiv[0].offsetHeight) {
     newFontSize = (parseInt($(textDiv).css('font-size').slice(0, -2)) - 1) + 'px';
@@ -22,8 +22,6 @@ function updateTextOverlay(textDiv, text) {
 }
 
 function resizeAllContainers() {
-  debugger;
-  console.log("resizeAllContainers");
   $('.product-preview-text-container').each(function(index, container) {
     var preview_img = $($(container).siblings('.preview-img')[0]);
     console.log(preview_img);
@@ -59,6 +57,7 @@ function resizeContainers(preview_img, container) {
   var new_height = Math.round($(container).attr('height') * height_ratio);
   var new_left = Math.round($(container).attr('left') * width_ratio - new_width/2);
   var new_top = Math.round($(container).attr('top') * height_ratio - new_height/2);
+  var input_id = $(container).attr("id").replace("container-", "");
 
   var text_transform = $(container).attr('text-transform');
   $(container).css('font-family', $(container).attr('font-family'));
@@ -73,13 +72,11 @@ function resizeContainers(preview_img, container) {
   
   // TODO: maybe move this to the form submit
   if (text_transform == "uppercase") {
-    var input_id = $(container).attr("id").replace("container-", "");
     $("input#" + input_id).css('text-transform', text_transform);
   }
   
-  debugger;
-  if ($(container).val()) {
-    updateTextOverlay(container, $(container).val());
+  if ($(input_id).val()) {
+    updateTextOverlay(container, $(input_id).val());
   }
 }
 
