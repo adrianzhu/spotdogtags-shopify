@@ -22,6 +22,7 @@ function updateTextOverlay(textDiv, text) {
 }
 
 function resizeAllContainers() {
+  debugger;
   $('.product-preview-text-container').each(function(index, container) {
     var preview_img = $($(container).siblings('.preview-img')[0]);
 	
