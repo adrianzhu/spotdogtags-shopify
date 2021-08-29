@@ -23,9 +23,10 @@ function updateTextOverlay(textDiv, text) {
 
 function resizeAllContainers() {
   debugger;
+  console.log("resizeAllContainers");
   $('.product-preview-text-container').each(function(index, container) {
     var preview_img = $($(container).siblings('.preview-img')[0]);
-	
+    console.log(preview_img);
 	// Check if the img is loaded completely, when it's not the height will be 0.
 	// If it's 0 then wait until fully loaded
     if (preview_img.height() == 0) {
