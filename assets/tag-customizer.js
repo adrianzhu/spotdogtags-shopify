@@ -57,7 +57,7 @@ function resizeContainers(preview_img, container) {
   var new_height = Math.round($(container).attr('height') * height_ratio);
   var new_left = Math.round($(container).attr('left') * width_ratio - new_width/2);
   var new_top = Math.round($(container).attr('top') * height_ratio - new_height/2);
-  var input_id = $(container).attr("id").replace("container-", "");
+  var input_id = "input#" + $(container).attr("id").replace("container-", "");
 
   var text_transform = $(container).attr('text-transform');
   $(container).css('font-family', $(container).attr('font-family'));
@@ -72,11 +72,11 @@ function resizeContainers(preview_img, container) {
   
   // TODO: maybe move this to the form submit
   if (text_transform == "uppercase") {
-    $("input#" + input_id).css('text-transform', text_transform);
+    $(input_id).css('text-transform', text_transform);
   }
   
-  if ($(input_id).text()) {
-    updateTextOverlay(container, $(input_id).text());
+  if ($(input_id).val()) {
+    updateTextOverlay(container, $(input_id).val());
   }
 }
 
