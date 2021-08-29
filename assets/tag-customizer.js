@@ -120,6 +120,8 @@ $(document).ready(function() {
   initTextPreviewListeners();
   initAccordionListeners();
   $(window).resize(function(e) {
+    console.log("resized");
+    console.log($("#field-PetName").height());
     resizeAllContainers();
   });
 });
