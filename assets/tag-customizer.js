@@ -49,35 +49,35 @@ function initTextPreviewListeners() {
 }
 
 // Given a preview_img on the page, calculate the text container size based on the ratio against the original 810x900 image
-function resizeContainers(preview_img, container) {
+function resizeContainers(preview_img, text_container) {
   // Calculate the text field width/height
   var width_ratio = (preview_img.width() / OG_WIDTH);
   var height_ratio = (preview_img.height() / OG_HEIGHT);
-  var new_width = Math.round($(container).attr('width') * width_ratio);
-  var new_height = Math.round($(container).attr('height') * height_ratio);
-  var new_left = Math.round($(container).attr('left') * width_ratio - new_width/2);
-  var new_top = Math.round($(container).attr('top') * height_ratio - new_height/2);
-  var input_id =  $(container).attr("id").replace("container-", "");
+  var new_width = Math.round($(text_container).attr('width') * width_ratio);
+  var new_height = Math.round($(text_container).attr('height') * height_ratio);
+  var new_left = Math.round($(text_container).attr('left') * width_ratio - new_width/2);
+  var new_top = Math.round($(text_container).attr('top') * height_ratio - new_height/2);
+  var input_id =  $(text_container).attr("id").replace("container-", "");
 
-  console.log("heights:");
-  console.log(preview_img.height());
-  console.log(height_ratio);
-  console.log(new_height);
+  // console.log("heights:");
+  // console.log(preview_img.height());
+  // console.log(height_ratio);
+  // console.log(new_height);
 
-  var text_transform = $(container).attr('text-transform');
-  $(container).css('font-family', $(container).attr('font-family'));
-  $(container).css('text-transform', $(container).attr('text-transform'));
-  $(container).css('color', $(container).attr('color'));
-  $(container).css('width', new_width);
-  $(container).css('height', new_height);
-  $(container).css('line-height', new_height + 'px');
-  $(container).css('left', new_left);
-  $(container).css('top', new_top);
-  $(container).css('text-transform', text_transform);
+  var text_transform = $(text_container).attr('text-transform');
+  $(text_container).css('font-family', $(text_container).attr('font-family'));
+  $(text_container).css('text-transform', $(text_container).attr('text-transform'));
+  $(text_container).css('color', $(text_container).attr('color'));
+  $(text_container).css('width', new_width);
+  $(text_container).css('height', new_height);
+  $(text_container).css('line-height', new_height + 'px');
+  $(text_container).css('left', new_left);
+  $(text_container).css('top', new_top);
+  $(text_container).css('text-transform', text_transform);
   
   // TODO: maybe move this to the form submit
   if (text_transform == "uppercase") {
-    var input_id = $(container).attr("id").replace("container-", "");
+    var input_id = $(text_container).attr("id").replace("container-", "");
     $("input#" + input_id).css('text-transform', text_transform);
   }
   
