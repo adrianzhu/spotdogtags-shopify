@@ -59,6 +59,11 @@ function resizeContainers(preview_img, container) {
   var new_top = Math.round($(container).attr('top') * height_ratio - new_height/2);
   var input_id =  $(container).attr("id").replace("container-", "");
 
+  console.log("heights:");
+  console.log(preview_img.height());
+  console.log(height_ratio);
+  console.log(new_height);
+
   var text_transform = $(container).attr('text-transform');
   $(container).css('font-family', $(container).attr('font-family'));
   $(container).css('text-transform', $(container).attr('text-transform'));
