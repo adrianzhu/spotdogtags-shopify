@@ -96,27 +96,31 @@
             {% endfor %}
           </select>
         
-          {% for text_field in text_field_json_front %}
-            <div class="grid__item product-form__item">
-              <label for="{{ text_field["field-id"] }}">{{ text_field["field-name"] }}</label>
-              <input type="text"
-                     id="{{ text_field["field-id"] }}" 
-                     name="properties[{{ text_field["field-name"] }}]" 
-                     maxlength={% if text_field["field-id"] == "PetName" %}"12"{% else %}"15"{% endif %}
-                     class="product-form__input tag-customizer-input">
-            </div>
-          {% endfor %}
+          {% if text_field_json_front %}
+            {% for text_field in text_field_json_front %}
+              <div class="grid__item product-form__item">
+                <label for="{{ text_field["field-id"] }}">{{ text_field["field-name"] }}</label>
+                <input type="text"
+                      id="{{ text_field["field-id"] }}" 
+                      name="properties[{{ text_field["field-name"] }}]" 
+                      maxlength={% if text_field["field-id"] == "PetName" %}"12"{% else %}"15"{% endif %}
+                      class="product-form__input tag-customizer-input">
+              </div>
+            {% endfor %}
+          {% endif %}
         
-          {% for text_field in text_field_json_back %}
-            <div class="grid__item product-form__item">
-              <label for="{{ text_field["field-id"] }}">{{ text_field["field-name"] }}</label>
-              <input type="text" 
-                     id="{{ text_field["field-id"] }}" 
-                     name="properties[{{ text_field["field-name"] }}]" 
-                     maxlength="15"
-                     class="product-form__input tag-customizer-input">
-            </div>
-          {% endfor %}
+          {% if text_field_json_back %}
+            {% for text_field in text_field_json_back %}
+              <div class="grid__item product-form__item">
+                <label for="{{ text_field["field-id"] }}">{{ text_field["field-name"] }}</label>
+                <input type="text" 
+                      id="{{ text_field["field-id"] }}" 
+                      name="properties[{{ text_field["field-name"] }}]" 
+                      maxlength="15"
+                      class="product-form__input tag-customizer-input">
+              </div>
+            {% endfor %}
+          {% endif %}
         
           <div class="product-form__item product-form__item--quantity">
             <label for="Quantity">{{ 'products.product.quantity' | t }}</label>
