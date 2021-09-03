@@ -9,8 +9,6 @@
 {%- assign current_variant = product.selected_or_first_available_variant -%}
 {% assign featured_image = product.images[4] %}
 
-<script>if (false) {console.log({{ product | json }}); console.log({{ product.images.size }});}</script>
-
 <a href="{{ product.url | within: collection }}" class="product-card">
   {% comment %} <img src="{{ featured_image.src | img_url: '480x480' }}" alt="{{ featured_image.alt | escape }}" class="product-card__image"> {% endcomment %}
   {% assign image = featured_image %}
