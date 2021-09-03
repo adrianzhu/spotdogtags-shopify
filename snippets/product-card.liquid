@@ -10,7 +10,6 @@
 {% assign featured_image = product.images[4] %}
 
 <a href="{{ product.url | within: collection }}" class="product-card">
-  {% comment %} <img src="{{ featured_image.src | img_url: '480x480' }}" alt="{{ featured_image.alt | escape }}" class="product-card__image"> {% endcomment %}
   {% assign image = featured_image %}
   <div class="product-card__image-container">
     <div class="product-card__image-wrapper">
