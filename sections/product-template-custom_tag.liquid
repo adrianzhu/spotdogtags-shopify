@@ -1,7 +1,8 @@
 <div class="page-width" itemscope itemtype="http://schema.org/Product" id="ProductSection-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="product" data-enable-history-state="true" data-ajax="{{ section.settings.enable_ajax }}" data-stock="{{ section.settings.stock_enable }}">
   {% assign product_image_size = '800x' %}
-  {% assign text_field_json_front = product.metafields.custom_fields["text_field_json_front"] | default: "{}" %}
-  {% assign text_field_json_back = product.metafields.custom_fields["text_field_json_back"] | default: "{}" %}
+  {% assign custom_fields = product.metafields.custom_fields %}
+  {% assign text_field_json_front = custom_fields["text_field_json_front"] | default: "{}" %}
+  {% assign text_field_json_back = custom_fields["text_field_json_back"] | default: "{}" %}
 
   <meta itemprop="name" content="{{ product.title }}">
   <meta itemprop="url" content="{{ shop.url }}{{ product.url }}">
@@ -234,8 +235,8 @@
           <div class="product-info-header accordion-header">DESCRIPTION<span class="accordion-icon fas fa-angle-up"></span></div>
           <div class="accordion-content">
             {{ product.description }}
-            {% if product.metafields.custom_fields["product_details"] %}
-              {% assign product_details = product.metafields.custom_fields["product_details"] | split: "|" %}
+            {% if custom_fields["product_details"] %}
+              {% assign product_details = custom_fields["product_details"] | split: "|" %}
               <div class="product-details">
                 <ul>
                   {% for product_detail in product_details %}
