@@ -45,7 +45,9 @@
       slideNumber: {{ 'homepage.hero.slide_number' | t: slide_number: '[slide_number]' | json }}
     };
   </script>
-
+  <script>
+    console.log('test');
+  </script>
   <script src="{{ 'lazysizes.min.js' | asset_url }}" async="async"></script>
 
   {% if request.page_type contains 'customers/' %}
