@@ -66,7 +66,21 @@ what you are doing, as you may break the app.
       <div class="ooo-instagram-feed__list">
         <template data-media-template>
           {%- capture instagram_media_content -%}
-            <img class="ooo-instagram-media__image" src="" loading="lazy" height="400" width="400" alt="" data-instagram-field="media_url">
+            <img class="ooo-instagram-media__image lazyload" src="" loading="lazy" height="400" width="400" alt="" data-instagram-field="media_url">
+
+
+            {% comment %} <img class="hero__image hero__image--{{ block.id }} lazyload {% unless forloop.first == true %} lazypreload{% endunless %}"
+              {% if forloop.first == true %}
+                src="{{ block.settings.image | img_url: '300x' }}"
+              {% endif %}
+              data-src="{{ img_url }}"
+              data-widths="[540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048, 4472]"
+              data-aspectratio="{{ block.settings.image.aspect_ratio }}"
+              data-sizes="auto"
+              data-parent-fit="cover"
+              alt="{{ block.settings.image.alt | escape }}"
+              style="object-position: {{ block.settings.image_position }}"> {% endcomment %}
+
 
             {%- capture overlay_content -%}
               {%- if section.settings.show_author -%}
