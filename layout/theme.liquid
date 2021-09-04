@@ -1,7 +1,6 @@
 <!doctype html>
 <html class="no-js" lang="{{ shop.locale }}">
 <head>
-
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -45,7 +44,6 @@
       slideNumber: {{ 'homepage.hero.slide_number' | t: slide_number: '[slide_number]' | json }}
     };
   </script>
-
   <script src="{{ 'lazysizes.min.js' | asset_url }}" async="async"></script>
 
   {% if request.page_type contains 'customers/' %}
