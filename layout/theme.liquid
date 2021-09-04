@@ -56,8 +56,8 @@
   <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'tag-customizer.js' | asset_url }}" async="async"></script>
   
-  {% comment %} {{ 'theme.scss.css' | asset_url | stylesheet_tag }} {% endcomment %}
-  {% comment %} {{ 'spot-dog-tags.css' | asset_url | stylesheet_tag }} {% endcomment %}
+  {{ 'theme.scss.css' | asset_url | stylesheet_tag }}
+  {{ 'spot-dog-tags.css' | asset_url | stylesheet_tag }}
   
   {% if request.page_type == 'product' or request.page_type == 'cart' or request.page_type == 'index' %}
     <script>
