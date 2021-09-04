@@ -1,7 +1,7 @@
 <div class="page-width" itemscope itemtype="http://schema.org/Product" id="ProductSection-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="product" data-enable-history-state="true" data-ajax="{{ section.settings.enable_ajax }}" data-stock="{{ section.settings.stock_enable }}">
   {% assign product_image_size = '800x' %}
   {% assign custom_fields = {} %}
-  {% comment %} {% assign custom_fields = product.metafields.custom_fields %} {% endcomment %}
+  {% comment %}custom_fields = product.metafields.custom_fields{% endcomment %}
   {% assign text_field_json_front = custom_fields["text_field_json_front"] | default: "{}" %}
   {% assign text_field_json_back = custom_fields["text_field_json_back"] | default: "{}" %}
 
