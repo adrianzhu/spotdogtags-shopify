@@ -1,5 +1,6 @@
 var OG_WIDTH = 810;
 var OG_HEIGHT = 900;
+var DEBUG_MODE = false;
 
 function updateTextOverlay(textDiv, text) {
   $(textDiv).text(text);
@@ -8,12 +9,13 @@ function updateTextOverlay(textDiv, text) {
   var textField = $(textDiv)[0];
   var newFontSize;
   
-  // console.log("updateTextOverlay: " + textDiv + " " + text);
-  // console.log("height = " + $(textDiv).height());
-
-  // console.log("innerHeight = " + $(textDiv).innerHeight());
-  // console.log("offsetHeight = " + $(textDiv)[0].offsetHeight);
-  // console.log("container offsetHeight = " + containerDiv[0].offsetHeight);
+  if (DEBUG_MODE) {
+    console.log("updateTextOverlay: " + textDiv + " " + text);
+    console.log("height = " + $(textDiv).height());
+    console.log("innerHeight = " + $(textDiv).innerHeight());
+    console.log("offsetHeight = " + $(textDiv)[0].offsetHeight);
+    console.log("container offsetHeight = " + containerDiv[0].offsetHeight);
+  }
 
   while ($(textDiv).height() > containerDiv[0].offsetHeight) {
     newFontSize = (parseInt($(textDiv).css('font-size').slice(0, -2)) - 1) + 'px';
@@ -24,22 +26,22 @@ function updateTextOverlay(textDiv, text) {
 function resizeAllContainers() {
   $('.product-preview-text-container').each(function(index, container) {
     var preview_img = $($(container).siblings('.preview-img')[0]);
-    // console.log(preview_img);
-	// Check if the img is loaded completely, when it's not the height will be 0.
-	// If it's 0 then wait until fully loaded
+    if (DEBUG_MODE) {
+      console.log(preview_img);
+    }
+    // Check if the img is loaded completely, when it's not the height will be 0.
+    // If it's 0 then wait until fully loaded
     if (preview_img.height() == 0) {
       $(preview_img).on('load', function() {
-        resizeContainers(preview_img, container);
+        resizeContainer(preview_img, container);
       });
     } else {
-      resizeContainers(preview_img, container);
+      resizeContainer(preview_img, container);
     }
   });
 }
 
 function initTextPreviewListeners() {
-  resizeAllContainers();
-  
   // Resize text on every user input
   $('input.tag-customizer-input').each(function(index, input) {
     $(input).on('input', function() {
@@ -49,7 +51,7 @@ function initTextPreviewListeners() {
 }
 
 // Given a preview_img on the page, calculate the text container size based on the ratio against the original 810x900 image
-function resizeContainers(preview_img, text_container) {
+function resizeContainer(preview_img, text_container) {
   // Calculate the text field width/height
   var width_ratio = (preview_img.width() / OG_WIDTH);
   var height_ratio = (preview_img.height() / OG_HEIGHT);
@@ -59,10 +61,12 @@ function resizeContainers(preview_img, text_container) {
   var new_top = Math.round($(text_container).attr('top') * height_ratio - new_height/2);
   var input_id =  $(text_container).attr("id").replace("container-", "");
 
-  // console.log("heights:");
-  // console.log(preview_img.height());
-  // console.log(height_ratio);
-  // console.log(new_height);
+  if (DEBUG_MODE) {
+    console.log("heights:");
+    console.log(preview_img.height());
+    console.log(height_ratio);
+    console.log(new_height);
+  }
 
   var text_transform = $(text_container).attr('text-transform');
   $(text_container).css('font-family', $(text_container).attr('font-family'));
@@ -89,7 +93,6 @@ function resizeContainers(preview_img, text_container) {
 
 
 // ACCORDION
-
 function expandClick() {
   var accordion_icon = $(this).find(".accordion-icon");
   accordion_icon.toggleClass("fa-angle-down");
@@ -106,24 +109,8 @@ function initAccordionListeners() {
   }
 }
 
-// On form submit do a check:
-
-// TODO: check all fields for unsupported chars
-// if there are then show warning and prevent submit
-// if not then remove warning
-
-// for blank fields we tried:
-// adding empty symbols (did not work because backend will show squares)
-// Adding spaces (will not show up still)
-// changing the cart code (cannot change checkout code unless we have shopify prem)
-
-// try this method for blank fields:
-// add empty symbol, and backend trims all of that exact symbol before outputting
-
-// theme.js > cart.prototype.addItemFromForm 
-
 $(document).ready(function() {
-  // console.log("Staging");
+  resizeAllContainers();
   initTextPreviewListeners();
   initAccordionListeners();
   $(window).resize(function(e) {
