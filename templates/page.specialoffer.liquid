@@ -1,6 +1,15 @@
 <div class="page-width">
   <h1 class="small--text-center">{{ page.title }}</h1>
   <div class="grid grid--half-gutters">
+    <div class="content-block">
+          <div class="rte">
+            <h3>Save 10% off all pre-designed personalized dog tags</h3>
+				<p>Exclusively for North American Flyball Association (NAFA) members, friends, and family!</p>
+				<p>Use code <span style="color: #1fd76c;"><strong>NAFA10 </strong></span>at checkout.</p>
+				<p>Code cannot be combined with other offers.</p>
+          </div>
+        </div>
+    </div>
       <div class="grid__item medium-up--one-half">
       {% if page.content != blank %}
         <div class="content-block">
@@ -14,7 +23,7 @@
       
       <div class="content-block">
         <h3>Start your custom team tag order</h3>
-        <p>Looking for team tags? Let's chat! Tell us about your </p>
+        <p>Looking for team tags? Let's chat! Contact us below to get the order form. </p>
         <div class="contact-form form-vertical">
           {% form 'contact' %}
 
@@ -43,15 +52,7 @@
           {% endform %}
         </div>
       </div>
-      <div class="content-block">
-          <div class="rte">
-            <h3>Save 10% off all pre-designed personalized dog tags</h3>
-				<p>Exclusively for North American Flyball Association (NAFA) members, friends, and family!</p>
-				<p>Use code <span style="color: #1fd76c;"><strong>NAFA10 </strong></span>at checkout.</p>
-				<p>Code cannot be combined with other offers.</p>
-          </div>
-        </div>
-    </div>
+      
   </div>
     {% section 'featured-products-subsection' %}
 </div>
