@@ -1,6 +1,7 @@
 var OG_WIDTH = 810;
 var OG_HEIGHT = 900;
 var DEBUG_MODE = false;
+var text_preview_event_tracked = false;
 
 function updateTextOverlay(textDiv, text) {
   $(textDiv).text(text);
@@ -46,6 +47,16 @@ function initTextPreviewListeners() {
   $('input.tag-customizer-input').each(function(index, input) {
     $(input).on('input', function() {
       updateTextOverlay("#field-" + $(this).attr("id"), $(this).val());
+      if (!text_preview_event_tracked) {
+        var text_type = $('.product-single__title').text();
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'TextPreviewInput',
+          eventAction: 'input',
+          eventLabel: text_type
+        });
+        text_preview_event_tracked = true;
+      }
     });
   });
 }
