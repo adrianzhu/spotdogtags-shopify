@@ -135,8 +135,8 @@
           "logo": "shopify:\/\/shop_images\/Logo_Stacked_RGB.png",
           "logo_max_width": "100",
           "main_linklist": "main-menu",
-          "promo_bar_enable": true,
-          "promo_bar_text": "BOGO 50% off - use code GRANDOPENING",
+          "promo_bar_enable": false,
+          "promo_bar_text": "",
           "promo_bar_link": ""
         }
       },
