@@ -295,11 +295,75 @@
         ],
         "settings": {
         }
+      },
+      "1631764088c8b5ef4c": {
+        "type": "gallery",
+        "blocks": {
+          "1631764088c8b5ef4c-1": {
+            "type": "image_block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/DSC08809-3_1.jpg",
+              "image_align": "top center"
+            }
+          }
+        },
+        "block_order": [
+          "1631764088c8b5ef4c-1"
+        ],
+        "settings": {
+          "gallery_height": "short"
+        }
+      },
+      "1631764150533d35cb": {
+        "type": "link-block",
+        "blocks": {
+          "1631764150533d35cb-0": {
+            "type": "link_block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/DSC08797.jpg",
+              "link": "shopify:\/\/collections\/all-tags",
+              "cta_label": "See All Designs"
+            }
+          },
+          "1631764150533d35cb-1": {
+            "type": "link_block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/DSC08726.jpg",
+              "link": "shopify:\/\/collections",
+              "cta_label": "Browse Collections"
+            }
+          }
+        },
+        "block_order": [
+          "1631764150533d35cb-0",
+          "1631764150533d35cb-1"
+        ],
+        "settings": {
+        }
+      },
+      "163176436940f02ce4": {
+        "type": "advanced-content",
+        "blocks": {
+          "163176436940f02ce4-0": {
+            "type": "html",
+            "settings": {
+              "code": "<div style=\"text-align:center;\">\n<h2>Personalize a pet tag for your best friend.<\/h2>\n<p> It's as simple as choosing a design, customizing it, and seeing it all happen online! <\/p>\n<p>We can't wait to see what you pick out for your pet ❤️<\/p>\n<\/div>",
+              "width": "100%",
+              "alignment": "top-middle"
+            }
+          }
+        },
+        "block_order": [
+          "163176436940f02ce4-0"
+        ],
+        "settings": {
+        }
       }
     },
     "content_for_index": [
-      "slideshow",
-      "featured-products",
+      "1631764088c8b5ef4c",
+      "163176436940f02ce4",
+      "1631764150533d35cb",
       "1629751631dc68794a",
       "16051571228dd18ee8",
       "16051571295ae8a90c"
