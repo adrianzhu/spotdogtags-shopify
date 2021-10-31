@@ -194,44 +194,6 @@
           "overlay_opacity": 65
         }
       },
-      "16051571295ae8a90c": {
-        "type": "featured-collections",
-        "blocks": {
-          "16051571295ae8a90c-0": {
-            "type": "collection",
-            "settings": {
-              "collection": "hello-my-name-is"
-            }
-          },
-          "b6932f71-7af8-4bc5-9c48-5c5533dbd077": {
-            "type": "collection",
-            "settings": {
-              "collection": "into-the-wild"
-            }
-          },
-          "16051571295ae8a90c-1": {
-            "type": "collection",
-            "settings": {
-              "collection": "good-pups-club"
-            }
-          },
-          "decf1df3-3cd6-4d54-8fb2-347ae22b0d75": {
-            "type": "collection",
-            "settings": {
-              "collection": "sweet-treats"
-            }
-          }
-        },
-        "block_order": [
-          "16051571295ae8a90c-0",
-          "b6932f71-7af8-4bc5-9c48-5c5533dbd077",
-          "16051571295ae8a90c-1",
-          "decf1df3-3cd6-4d54-8fb2-347ae22b0d75"
-        ],
-        "settings": {
-          "stretch_collection_image": false
-        }
-      },
       "list-collections-template": {
         "type": "list-collections-template",
         "blocks": {
@@ -358,6 +320,16 @@
         ],
         "settings": {
         }
+<<<<<<< HEAD
+=======
+      },
+      "1631933604b9bfda58": {
+        "type": "featured-products",
+        "settings": {
+          "collection": "featured-tags",
+          "rows": 2
+        }
+>>>>>>> main
       }
     },
     "content_for_index": [
@@ -366,7 +338,7 @@
       "1631764150533d35cb",
       "1629751631dc68794a",
       "16051571228dd18ee8",
-      "16051571295ae8a90c"
+      "1631933604b9bfda58"
     ]
   },
   "presets": {
