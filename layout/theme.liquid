@@ -4,6 +4,25 @@
 <!-- Added by AVADA SEO Suite -->
 {% include 'avada-seo' %}
 <!-- /Added by AVADA SEO Suite -->
+  
+  {% if request.page_type == 'product' %}
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "{{ product.title }}",
+        "image": ["{{ product.featured_image.src }}"],
+        "description": "{{ product.description }}",
+        "offers": {
+          "@type": "Offer",
+          "url": "{{ shop.url }}{{ product.url }}",
+          "priceCurrency": "{{ cart.currency.iso_code }}",
+          "price": "{{ product.price }}",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    </script>
+  {% endif%}
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
