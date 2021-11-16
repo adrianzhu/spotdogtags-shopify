@@ -136,7 +136,7 @@
           "logo_max_width": "100",
           "main_linklist": "main-menu",
           "promo_bar_enable": true,
-          "promo_bar_text": "FREE SHIPPING: US $20+ \/ CANADA $30+ \/ INT $45+",
+          "promo_bar_text": "SALE!! Buy one get one 50% off on ALL TAGS",
           "promo_bar_link": ""
         }
       },
@@ -320,8 +320,6 @@
         ],
         "settings": {
         }
-<<<<<<< HEAD
-=======
       },
       "1631933604b9bfda58": {
         "type": "featured-products",
@@ -329,7 +327,6 @@
           "collection": "featured-tags",
           "rows": 2
         }
->>>>>>> main
       }
     },
     "content_for_index": [
