@@ -9,7 +9,7 @@
 {%- assign current_variant = product.selected_or_first_available_variant -%}
 
 <a href="{{ product.url | within: collection }}" class="product-card">
-  {% assign image = product.images[4] %}
+  {% assign image = product.featured_image %}
   <div class="product-card__image-container">
     <div class="product-card__image-wrapper">
       <div class="product-card__image js" style="max-width: {% include 'image-width' with image: image, width: 235 %}px;" data-image-id="{{ image.id }}" data-image-with-placeholder-wrapper>
