@@ -92,12 +92,14 @@
         "blocks": {
           "linklist": {
             "type": "menu",
+            "disabled": true,
             "settings": {
               "link_list": "footer"
             }
           },
           "social": {
             "type": "social",
+            "disabled": true,
             "settings": {
               "title": "Follow us",
               "align": "left"
@@ -105,6 +107,7 @@
           },
           "7b91b658-f0ef-4c81-9018-3c0c9ca7eba6": {
             "type": "newsletter",
+            "disabled": true,
             "settings": {
               "color_newsletter_input": "#1a1a1a",
               "color_newsletter_input_text": "#ffffff",
@@ -171,6 +174,7 @@
       },
       "16051571228dd18ee8": {
         "type": "maestrooo-instagram",
+        "disabled": true,
         "settings": {
           "title": "Spotted by SpotDT",
           "subheading": "<p>Got one of our tags? Tag us on Instagram with #getSpotDT<\/p>",
@@ -255,6 +259,7 @@
           "196fa7f6-65b5-4071-809a-cef5b8adcc85",
           "bbf48b57-d3a5-4839-bc43-ea0be29d569a"
         ],
+        "disabled": true,
         "settings": {
         }
       },
@@ -300,6 +305,7 @@
           "1631764150533d35cb-0",
           "1631764150533d35cb-1"
         ],
+        "disabled": true,
         "settings": {
         }
       },
@@ -318,11 +324,13 @@
         "block_order": [
           "163176436940f02ce4-0"
         ],
+        "disabled": true,
         "settings": {
         }
       },
       "1631933604b9bfda58": {
         "type": "featured-products",
+        "disabled": true,
         "settings": {
           "collection": "featured-tags",
           "rows": 2
@@ -344,9 +352,9 @@
         "settings": {
           "button_color": "#ffba2c",
           "button_icon": "chat_bubble",
+          "button_text": "no_text",
           "button_horizontal_position": "bottom_right",
           "button_vertical_position": "lowest",
-          "button_text": "no_text",
           "greeting_message": "👋 Hi, message us with any questions. We're happy to help!"
         }
       }
