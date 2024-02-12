@@ -137,9 +137,9 @@
         "settings": {
           "logo": "shopify:\/\/shop_images\/Logo_Stacked_RGB.png",
           "logo_max_width": "100",
-          "main_linklist": "main-menu",
+          "main_linklist": "",
           "promo_bar_enable": true,
-          "promo_bar_text": "",
+          "promo_bar_text": "Spot Dog Tags is on a break! No orders will be accepted at this time.",
           "promo_bar_link": ""
         }
       },
