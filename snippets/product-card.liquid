@@ -12,7 +12,7 @@
   {% assign image = product.featured_image %}
   <div class="product-card__image-container">
     <div class="product-card__image-wrapper">
-      <div class="product-card__image js" style="max-width: {% include 'image-width' with image: image, width: 235 %}px;" data-image-id="{{ image.id }}" data-image-with-placeholder-wrapper>
+      <div class="product-card__image js" style="max-width: {% include 'image-width' with image, image: image, width: 235 %}px;" data-image-id="{{ image.id }}" data-image-with-placeholder-wrapper>
         <div style="padding-top:{{ 1 | divided_by: image.aspect_ratio | times: 100 }}%;">
           {% assign img_url = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
           <img class="lazyload"
@@ -95,3 +95,13 @@
     <span class="btn product-card__overlay-btn {% if view_string_length > 8 %} btn--narrow{% endif %}">{{ 'products.product.view' | t }}</span>
   </div>
 </a>
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% include 'image-width' with image: image, width: 235 %}"
+  to: "{% include 'image-width' with image, image: image, width: 235 %}"
+  position: 592..656
+{% endcomment %}

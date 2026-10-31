@@ -54,7 +54,7 @@
               {% if collection_count > 4 and forloop.index > 3 %}
                 {% assign row_number = forloop.index | divided_by: 3.0 | ceil %}
               {% endif %}
-              {% include 'collection-grid-item' with stretch_collection_image: false, height: height %}
+              {% include 'collection-grid-item' with stretch_collection_image, stretch_collection_image: false, height: height %}
             {% endif %}
           {% endunless %}
         {% endfor %}
@@ -71,7 +71,7 @@
               {% if collection_count > 4 and forloop.index > 3 %}
                 {% assign row_number = forloop.index | divided_by: 3.0 | ceil %}
               {% endif %}
-              {% include 'collection-grid-item' with stretch_collection_image: false, height: height %}
+              {% include 'collection-grid-item' with stretch_collection_image, stretch_collection_image: false, height: height %}
             {% endif %}
           {% endunless %}
         {% endfor %}
@@ -88,7 +88,7 @@
           {% if collection_count > 4 and forloop.index > 3 %}
             {% assign row_number = forloop.index | divided_by: 3.0 | ceil %}
           {% endif %}
-          {% include 'collection-grid-item' with stretch_collection_image: false, height: height %}
+          {% include 'collection-grid-item' with stretch_collection_image, stretch_collection_image: false, height: height %}
         {% endif %}
       {% endfor %}
     </div>
@@ -528,3 +528,25 @@
   ]
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% include 'collection-grid-item' with stretch_collection_image: false, height:
+    height %}"
+  to: "{% include 'collection-grid-item' with stretch_collection_image, stretch_collection_image:
+    false, height: height %}"
+  position: 2405..2520
+- from: "{% include 'collection-grid-item' with stretch_collection_image: false, height:
+    height %}"
+  to: "{% include 'collection-grid-item' with stretch_collection_image, stretch_collection_image:
+    false, height: height %}"
+  position: 3248..3363
+- from: "{% include 'collection-grid-item' with stretch_collection_image: false, height:
+    height %}"
+  to: "{% include 'collection-grid-item' with stretch_collection_image, stretch_collection_image:
+    false, height: height %}"
+  position: 4025..4140
+{% endcomment %}
