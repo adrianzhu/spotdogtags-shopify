@@ -21,7 +21,7 @@
                 {%- for image in product.images -%}
                   <div class="product-single__photo product__photo-container product__photo-container-{{ section.id }} js{% unless image == featured_image %} hide{% endunless %}"
                        id="ProductPhoto"
-                       style="max-width: {% include 'image-width' with image: image, width: 410 %}px;"
+                       style="max-width: {% include 'image-width' with image, image: image, width: 410 %}px;"
                        data-image-id="{{ image.id }}">
                     <div class="product__photo-wrapper product__photo-wrapper-{{ section.id }}"
                          style="padding-top:{{ 1 | divided_by: image.aspect_ratio | times: 100}}%;">
@@ -127,9 +127,9 @@
             {% else %}
               <hr>
 
-              {% capture "form_class" %}product-form{% if section.settings.enable_payment_button %} product-form--payment-button{% endif %}{%- endcapture %}
+              {% capture form_class %}product-form{% if section.settings.enable_payment_button %} product-form--payment-button{% endif %}{%- endcapture %}
 
-              {% capture "form_id" %}AddToCartForm-{{ section.id }}{%- endcapture %}
+              {% capture form_id %}AddToCartForm-{{ section.id }}{%- endcapture %}
 
               {% form 'product', product, class:form_class, id:form_id %}
                 {% unless product.has_only_default_variant %}
@@ -439,4 +439,19 @@
   ]
 }
 {% endschema %}
-{% include "product-personalizer" %}
+{% include "product-personalizer" %}{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% include 'image-width' with image: image, width: 410 %}"
+  to: "{% include 'image-width' with image, image: image, width: 410 %}"
+  position: 1617..1681
+- from: '{% capture "form_class" %}'
+  to: "{% capture form_class %}"
+  position: 7981..8005
+- from: '{% capture "form_id" %}'
+  to: "{% capture form_id %}"
+  position: 8137..8158
+{%- endcomment -%}

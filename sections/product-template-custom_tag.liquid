@@ -62,9 +62,9 @@
       <div class="product-single__info-wrapper">
         
         
-        {% capture "form_class" %}product-form{% if section.settings.enable_payment_button %} product-form--payment-button{% endif %}{%- endcapture %}
+        {% capture form_class %}product-form{% if section.settings.enable_payment_button %} product-form--payment-button{% endif %}{%- endcapture %}
 
-        {% capture "form_id" %}AddToCartForm-{{ section.id }}{%- endcapture %}
+        {% capture form_id %}AddToCartForm-{{ section.id }}{%- endcapture %}
 
         {% form 'product', product, class:form_class, id:form_id %}
           <div class="product-info-header product-form__item">CUSTOMIZE YOUR TAG</div>
@@ -425,3 +425,16 @@
   ]
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: '{% capture "form_class" %}'
+  to: "{% capture form_class %}"
+  position: 3500..3524
+- from: '{% capture "form_id" %}'
+  to: "{% capture form_id %}"
+  position: 3650..3671
+{% endcomment %}

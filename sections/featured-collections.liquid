@@ -41,7 +41,7 @@
       {% endif %}
 
       {% assign featured_collection = collections[block.settings.collection] %}
-      {% include 'collection-grid-item' with stretch_collection_image: section.settings.stretch_collection_image, height: height %}
+      {% include 'collection-grid-item' with stretch_collection_image, stretch_collection_image: section.settings.stretch_collection_image, height: height %}
     {% endfor %}
   </div>
 
@@ -210,3 +210,15 @@
   ]
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% include 'collection-grid-item' with stretch_collection_image: section.settings.stretch_collection_image,
+    height: height %}"
+  to: "{% include 'collection-grid-item' with stretch_collection_image, stretch_collection_image:
+    section.settings.stretch_collection_image, height: height %}"
+  position: 1670..1821
+{% endcomment %}
